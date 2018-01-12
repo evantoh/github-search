@@ -23,11 +23,12 @@
           <div>
             <p>
               <span class="label label-default">{{profile.followers}} followers</span>
-              <span class="label label-default">{{profile.following}} following</span>
-              <span class="label label-default">{{profile.public-gists}} public gists</span>
-              <span class="label label-default">{{profile.public-repo}} public repo</span>
+              <span class="label label-primary">{{profile.following}} following</span>
+              <span class="label label-success">{{profile.public_gists}} public gists</span>
+              <span class="label label-info">{{profile.public_repos}} public repos</span>
             </p>
           </div>
+          <p><a href="{{profile.html_url}}" class="btn btn-primary btn-sm">View profile on github</a></p>
         </div>
 
     </div>
