@@ -11,6 +11,25 @@
         <img src="{{profile.avatar_url}}"
         class="img-circle img-responsive" alt="profile image">
       </div>
+        <div class="col-sm-5">
+          <ul class="list-group">
+            <li class="list-group-item"*ngIf="profile.bio">{{profile.bio}}</li>
+              <li class="list-group-item"*ngIf="profile.hireable">Available for hire{{profile.bio}}</li>
+                <li class="list-group-item"*ngIf="profile.blog">{{profile.blog}}</li>
+                  <li class="list-group-item"*ngIf="profile.email">{{profile.email}}</li>
+          </ul>
+        </div>
+        <div class="class col-sm-4">
+          <div>
+            <p>
+              <span class="label label-default">{{profile.followers}} followers</span>
+              <span class="label label-default">{{profile.following}} following</span>
+              <span class="label label-default">{{profile.public-gists}} public gists</span>
+              <span class="label label-default">{{profile.public-repo}} public repo</span>
+            </p>
+          </div>
+        </div>
+
     </div>
   </div>
 </div>
