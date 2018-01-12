@@ -6,12 +6,14 @@ import{HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ProfileFormComponent } from './profile-form/profile-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
+    ProfileFormComponent,
 
   ],
   imports: [
