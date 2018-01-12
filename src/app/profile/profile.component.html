@@ -1,3 +1,17 @@
-<p>
-  profile works!
-</p>
+<div *ngIf="profile">
+<div class="panel panel-default">
+  <div class="panel-body">
+  <img src="{{profile.avatar_url}}"/>  
+  </div>
+
+  <div class="panel-heading">
+    {{profile.name}}
+  </div>
+  <div class="panel-heading">
+    {{profile.followers}}
+  </div>
+  <div class="panel-heading">
+    {{profile.following}}
+  </div>
+</div>
+</div>
