@@ -21,5 +21,8 @@ this.username='evantoh';
      + this.username + "/repos?client_id="+ this.clientid +"&client_secret=" +this.clientsecret )
      .map(res=>res.json());
   }
+  updateprofile(username:string){
+    this.username=username;
+  }
 
 }
