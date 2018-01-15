@@ -12,20 +12,18 @@ repos:any[];
 username:string;
 
   constructor(private profileserve :ProfileService ) {
-    this.profileserve.getprofileInfo().subscribe(profile=>{
-      console.log(profile);
-      this.profile=profile;
 
-    })
-    this.profileserve.getprofileRepos().subscribe(repos=>{
-      console.log(repos);
-      this.repos=repos;
-
-
-    })
 }
 findprofile(){
   this.profileserve.updateprofile(this.username);
+  this.profileserve.getprofileInfo().subscribe(profile=>{
+    console.log(profile);
+    this.profile=profile;
+})
+  this.profileserve.getprofileRepos().subscribe(repos=>{
+    console.log(repos);
+    this.repos=repos;
+  })
 
 }
 
