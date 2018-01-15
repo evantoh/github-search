@@ -4,23 +4,27 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ProfileService {
 
+private repos:any[];
 private username:string;
-private clientid:"Iv1.8438a733dbb29966";
-private clientsecret:" 21b7ed833c042c602356c13e7d573e26c060235b";
+// private clientid:"Iv1.8438a733dbb29966";
+private apikey:string ="1b7369cc13d46c9e10c744f9b8556ca9ad44df69";
   constructor(private http:Http) {
 console.log("service is ready");
 this.username='evantoh';
   }
   getprofileInfo(){
-    return this.http.get("https://api.github.com/users/"
-     + this.username + "?client_id="+ this.clientid +"&client_secret=" +this.clientsecret )
+    return this.http.get("https://api.github.com/users/"+ this.username +"?access_token=" +this.apikey)
      .map(res=>res.json());
   }
   getprofileRepos(){
-    return this.http.get("https://api.github.com/users/"
-     + this.username + "/repos?client_id="+ this.clientid +"&client_secret=" +this.clientsecret )
-     .map(res=>res.json());
-  }
+      return this.http.get("https://api.github.com/users/"+ this.repos +"?access_token=" +this.apikey)
+       .map(res=>res.json());
+    }
+  // getprofileRepos(){
+  //   return this.http.get("https://api.github.com/users/"
+  //    + this.username + "/repos?client_id="+ this.clientid +"&client_secret=" +this.clientsecret )
+  //    .map(res=>res.json());
+  // }
   updateprofile(username:string){
     this.username=username;
   }
