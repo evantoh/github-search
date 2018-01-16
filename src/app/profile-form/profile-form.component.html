@@ -1,8 +1,12 @@
+<div class="body">
+<div class="jumbotron text-center" id="jumbo-background">
+  <h1>GIT HUB SEARCH APP</h1>
 
+</div>
 <form action="" class="search-form">
   <div class="form-group">
 <input type="text" class="form-control" placeholder="search users in with git usernames" [(ngModel)]="username"
-name="username" (keyup)="findprofile()">
+name="username" (keyup)="findprofile()" >
   </div>
 </form>
 <!-- <app-profile-form></app-profile-form> -->
@@ -19,22 +23,19 @@ name="username" (keyup)="findprofile()">
         <img src="{{profile.avatar_url}}"
         class="img-circle img-responsive" alt="profile image">
       </div>
-        <div class="col-sm-5">
+        <div class="col-lg-5">
           <ul class="list-group">
             <li class="list-group-item"*ngIf="profile.bio">{{profile.bio}}</li>
               <li class="list-group-item"*ngIf="profile.hireable">Available for hire</li>
                 <li class="list-group-item"*ngIf="profile.blog">{{profile.blog}}</li>
-
-          </ul>
+              </ul>
         </div>
-        <div class="class col-sm-4">
+        <div class="class col-lg-4">
           <div>
-            <p>
               <span class="label label-default">{{profile.followers}} followers</span>
               <span class="label label-primary">{{profile.following}} following</span>
               <span class="label label-success">{{profile.public_gists}} public gists</span>
               <span class="label label-info">{{profile.public_repos}} public repos</span>
-            </p>
           </div>
           <p><a href="{{profile.html_url}}" class="btn btn-primary btn-sm">View profile on github</a></p>
           <div class="pabel panel-default">
@@ -52,5 +53,6 @@ name="username" (keyup)="findprofile()">
 
     </div>
   </div>
+</div>
 </div>
 </div>
