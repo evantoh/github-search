@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import{Http,Headers} from'@angular/http';
 import 'rxjs/add/operator/map';
+
 @Injectable()
 export class ProfileService {
 
-private repos:any[];
+
 private username:string;
 // private clientid:"Iv1.8438a733dbb29966";
 private apikey:string ="1b7369cc13d46c9e10c744f9b8556ca9ad44df69";
@@ -17,7 +18,7 @@ this.username='evantoh';
      .map(res=>res.json());
   }
   getprofileRepos(){
-      return this.http.get("https://api.github.com/users/"+ this.repos +"?access_token=" +this.apikey)
+      return this.http.get("https://api.github.com/users/"+ this.username + "/repos" +"?access_token=" +this.apikey)
        .map(res=>res.json());
     }
   // getprofileRepos(){
